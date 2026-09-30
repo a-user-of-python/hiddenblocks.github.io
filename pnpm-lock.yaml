@@ -183,8 +183,8 @@ dependencies:
     specifier: github:TurboWarp/scratch-svg-renderer#develop
     version: github.com/TurboWarp/scratch-svg-renderer/62fe825405a451ab981c33d601d5c6c3581ced69(scratch-render-fonts@1.0.0-prerelease.20210401210003)
   scratch-vm:
-    specifier: github:PenguinMod/PenguinMod-Vm#develop
-    version: github.com/PenguinMod/PenguinMod-Vm/e4dc0bbbdda4b5546beadd482cd3cbef8c7525c0(@turbowarp/scratch-svg-renderer@1.0.0)(webpack@4.46.0)
+    specifier: github:a-user-of-python/PenguinMod-Vm#develop
+    version: github.com/a-user-of-python/PenguinMod-Vm/c3b3f7e192d4f26a42d18d3829f44b87dcaa11d6(@turbowarp/scratch-svg-renderer@1.0.0)(webpack@4.46.0)
   startaudiocontext:
     specifier: 1.2.1
     version: 1.2.1
@@ -11717,9 +11717,9 @@ packages:
       - webpack
     dev: false
 
-  github.com/PenguinMod/PenguinMod-Vm/e4dc0bbbdda4b5546beadd482cd3cbef8c7525c0(@turbowarp/scratch-svg-renderer@1.0.0)(webpack@4.46.0):
-    resolution: {tarball: https://codeload.github.com/PenguinMod/PenguinMod-Vm/tar.gz/e4dc0bbbdda4b5546beadd482cd3cbef8c7525c0}
-    id: github.com/PenguinMod/PenguinMod-Vm/e4dc0bbbdda4b5546beadd482cd3cbef8c7525c0
+  github.com/a-user-of-python/PenguinMod-Vm/c3b3f7e192d4f26a42d18d3829f44b87dcaa11d6(@turbowarp/scratch-svg-renderer@1.0.0)(webpack@4.46.0):
+    resolution: {tarball: https://codeload.github.com/a-user-of-python/PenguinMod-Vm/tar.gz/c3b3f7e192d4f26a42d18d3829f44b87dcaa11d6}
+    id: github.com/a-user-of-python/PenguinMod-Vm/c3b3f7e192d4f26a42d18d3829f44b87dcaa11d6
     name: scratch-vm
     version: 0.2.0
     peerDependencies:

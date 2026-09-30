@@ -81,6 +81,7 @@ import jwNumExtensionThumb from './penguinmod/extensions/jwNum.svg';
 import jwColorExtensionThumb from './penguinmod/extensions/jwColor.svg';
 
 import iygPerlinNoiseExtensionIcon from './penguinmod/extensions/perlinnoisebanner.png';
+import sbTerrainExtensionIcon from './terrain/terrain.svg';
 
 // thank yo godslayerakp for makin pmCamera :good:
 import pmCameraExtensionIcon from './penguinmod/extensions/pmcamera_thumbnail.png';
@@ -819,6 +820,27 @@ const menuItems = [
                 defaultMessage="Blocks for generating and using Perlin noise. Good for generating terrain, clouds, and other things."
                 description="Description of perlin noise extension"
                 id="iygPerlin.iygPerlinExtension.description"
+            />
+        ),
+        featured: true
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Terrain"
+                description="Name of terrain extension"
+                id="sbTerrain.sbTerrainExtension.name"
+            />
+        ),
+        extensionId: 'sbTerrain',
+        tags: ['penguinmod'],
+        iconURL: sbTerrainExtensionIcon,
+        insetIconURL: sbTerrainExtensionIcon,
+        description: (
+            <FormattedMessage
+                defaultMessage="Generate natural terrain worlds from noise: heightmaps, ocean/beach/land rules, zoom, and a camera to explore."
+                description="Description of terrain extension"
+                id="sbTerrain.sbTerrainExtension.description"
             />
         ),
         featured: true
