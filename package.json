@@ -90,7 +90,7 @@
     "scratch-render-fonts": "github:PenguinMod/penguinmod-render-fonts#master",
     "scratch-storage": "github:PenguinMod/PenguinMod-Storage#develop",
     "scratch-svg-renderer": "github:TurboWarp/scratch-svg-renderer#develop",
-    "scratch-vm": "github:a-user-of-python/PenguinMod-Vm#develop",
+    "scratch-vm": "github:a-user-of-python/PenguinMod-Vm#41ba8e9170ba5223c83a2e4c029b9dbdba1a2587",
     "startaudiocontext": "1.2.1",
     "style-loader": "^0.23.1",
     "text-encoding": "0.7.0",

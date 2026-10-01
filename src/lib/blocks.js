@@ -496,6 +496,20 @@ export default function (vm) {
         if (opcode == "data_variable" || opcode == "data_listcontents")
             return monitoredBlock ? monitoredBlock.isMonitored : false;
 
+        // blockly's createCheckbox_ calls this with only the block id, so the
+        // field info needed to build the field-specific monitor id is not
+        // available. Fall back to reporting monitored when the base block or
+        // any of its field-specific monitor blocks is monitored.
+        if (!inputList || !inputList[0]) {
+            const blocks = vm.runtime.monitorBlocks._blocks;
+            for (const id in blocks) {
+                if ((id === blockId || id.indexOf(blockId + '_') === 0) && blocks[id].isMonitored) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         const parsedFields = inputList[0].fieldRow
             .filter(({ name }) => name in fields)
             .map(field => {
