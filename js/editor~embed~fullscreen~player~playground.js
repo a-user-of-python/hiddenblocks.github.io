@@ -38730,14 +38730,6 @@ __webpack_require__.r(__webpack_exports__);
 /* eslint-enable import/no-unresolved */
 
 const defaultProject = translator => {
-  if (_arraybuffer_loader_default_project_sb3__WEBPACK_IMPORTED_MODULE_1___default.a.byteLength > 0) {
-    return [{
-      id: 0,
-      assetType: 'Project',
-      dataFormat: 'JSON',
-      data: _arraybuffer_loader_default_project_sb3__WEBPACK_IMPORTED_MODULE_1___default.a
-    }];
-  }
   let _TextEncoder;
   if (typeof _tw_text_encoder__WEBPACK_IMPORTED_MODULE_4__["TextEncoder"] === 'undefined') {
     _TextEncoder = __webpack_require__(/*! text-encoding */ "./src/lib/tw-text-encoder.js").TextEncoder;
@@ -38745,13 +38737,13 @@ const defaultProject = translator => {
     _TextEncoder = _tw_text_encoder__WEBPACK_IMPORTED_MODULE_4__["TextEncoder"];
   }
   const encoder = new _TextEncoder();
-  const projectJson = Object(_project_data__WEBPACK_IMPORTED_MODULE_0__["default"])(translator);
-  return [{
-    id: 0,
-    assetType: 'Project',
-    dataFormat: 'JSON',
-    data: JSON.stringify(projectJson)
-  }, {
+  // These two assets must be cached as builtins even when an override
+  // project is in use. cd21514d... is the standard empty costume/backdrop
+  // that the "Paint" actions (new sprite / costume / backdrop) request from
+  // storage; if it is missing from the builtin store, storage falls back to
+  // fetching it from the remote asset host, which stalls for seconds when
+  // the network is unavailable or blocked.
+  const sharedAssets = [{
     id: 'cd21514d0531fdffb22204e0ec5ed84a',
     assetType: 'ImageVector',
     dataFormat: 'SVG',
@@ -38762,6 +38754,21 @@ const defaultProject = translator => {
     dataFormat: 'SVG',
     data: encoder.encode(_raw_loader_penguin_svg__WEBPACK_IMPORTED_MODULE_3___default.a)
   }];
+  if (_arraybuffer_loader_default_project_sb3__WEBPACK_IMPORTED_MODULE_1___default.a.byteLength > 0) {
+    return [{
+      id: 0,
+      assetType: 'Project',
+      dataFormat: 'JSON',
+      data: _arraybuffer_loader_default_project_sb3__WEBPACK_IMPORTED_MODULE_1___default.a
+    }, ...sharedAssets];
+  }
+  const projectJson = Object(_project_data__WEBPACK_IMPORTED_MODULE_0__["default"])(translator);
+  return [{
+    id: 0,
+    assetType: 'Project',
+    dataFormat: 'JSON',
+    data: JSON.stringify(projectJson)
+  }, ...sharedAssets];
 };
 /* harmony default export */ __webpack_exports__["default"] = (defaultProject);
 
